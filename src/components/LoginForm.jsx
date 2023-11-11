@@ -19,7 +19,9 @@ export default function LoginForm() {
         // e.target.password.value = "";
     };
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={(e) => handleSubmit(e)}> */}
+
             <h1 className="loginH1">Bienvenue chez nous!</h1>
             <h2 className="loginH2">Connectez-vous</h2>
             <input
