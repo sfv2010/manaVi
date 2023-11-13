@@ -1,9 +1,10 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Button from "../../components/Button";
 
 function OrderPage() {
-    const location = useLocation();
-    const { username } = location.state || {};
+    // const location = useLocation();
+    // const { username } = location.state || {};
+    const { username } = useParams();
     return (
         <>
             <h1>

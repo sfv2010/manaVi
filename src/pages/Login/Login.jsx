@@ -9,7 +9,8 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/order", { state: { username } });
+        // navigate("/order", { state: { username } });
+        navigate(`order/${username}`);
     };
     return (
         <main className="loginContainer">
