@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
     const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`Bonjour ${username}`);
-        setUsername("");
+        navigate("/order", { state: { username } });
     };
     return (
         <main className="loginContainer">
@@ -22,16 +23,6 @@ function Login() {
                     value={username}
                     placeholder="Entre votre prénom..."
                     onChange={(e) => setUsername(e.target.value)}
-                    required
-                />
-
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
                     required
                 />
 
