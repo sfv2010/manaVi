@@ -1,14 +1,15 @@
+import burgerLogo from "../assets/logoOrange.png";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import { theme } from "../theme";
 
-export default function Logo({ textLeft, textRight, logoImg }) {
+export default function Logo() {
     return (
         <LogoStyled className="logoContainer">
-            <span>{textLeft}</span>
-            <img src={logoImg}></img>
-            <span>{textRight}</span>
+            <span>CRAZEE</span>
+            <img src={burgerLogo}></img>
+            <span>BURGER</span>
         </LogoStyled>
     );
 }
