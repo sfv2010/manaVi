@@ -35,7 +35,8 @@ function Login() {
                 </div>
 
                 <button type="submit">
-                    Accédez à mon espace <FaChevronRight className="chevron" />
+                    <span> Accédez à mon espace</span>{" "}
+                    <FaChevronRight className="chevron" />
                 </button>
             </form>
         </LoginStyled>
@@ -47,6 +48,7 @@ const LoginStyled = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     h1,
     h2 {
         font-family: Amatic SC;
@@ -79,7 +81,12 @@ const LoginStyled = styled.main`
         margin: 15px 0;
         padding-left: 50px;
         font-weight: ${theme.weights.regular};
+        font-size: 15px;
         color: ${theme.colors.dark};
+        border: none;
+        &::placeholder {
+            color: #d3d3d3;
+        }
     }
     .inputContainer {
         position: relative;
@@ -89,22 +96,28 @@ const LoginStyled = styled.main`
         position: absolute;
         top: 20px;
         left: 20px;
-        font-size: 15px;
+        font-size: 18px;
+        color: #d3d3d3;
     }
     button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: ${theme.colors.white};
         background-color: ${theme.colors.primary_burger};
         font-weight: ${theme.weights.bold};
+        font-size: 15px;
         cursor: pointer;
-    }
-    button:hover {
-        color: ${theme.colors.primary_burger};
-        background-color: ${theme.colors.white};
+
+        &:hover {
+            color: ${theme.colors.primary_burger};
+            background-color: ${theme.colors.white};
+            transition: all 0.3s;
+        }
     }
     .chevron {
-        text-align: center;
         margin-left: 10px;
-        padding-top: 3px;
+        font-size: 15px;
     }
 `;
 

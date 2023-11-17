@@ -6,10 +6,10 @@ import { theme } from "../theme";
 
 export default function Logo() {
     return (
-        <LogoStyled className="logoContainer">
-            <span>CRAZEE</span>
+        <LogoStyled>
+            <h1>CRAZEE</h1>
             <img src={burgerLogo}></img>
-            <span>BURGER</span>
+            <h1>BURGER</h1>
         </LogoStyled>
     );
 }
@@ -24,18 +24,21 @@ const LogoStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    .logoContainer {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+    transform: scale(3);
+
     img {
         margin: 0 10px;
-        max-height: 110px;
+        width: 60px;
+        object-fit: contain;
+        object-position: center;
     }
-    span {
+    h1 {
         font-family: Amatic SC;
-        font-size: 110px;
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 1em;
+        font-weight: 700;
+        letter-spacing: 1.5px;
         color: ${theme.colors.primary_burger};
     }
 `;
