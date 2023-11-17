@@ -1,7 +1,6 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Login from "./pages/Login/Login";
+import Login from "./pages/Login/LoginPage";
 import Order from "./pages/Order/OrderPage";
 import Error from "./pages/Error/ErrorPage";
 
