@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-export default function Button({ link, children }) {
+export default function Button({ type, className, label, Icon }) {
     return (
-        <Link to={link}>
-            <button type="button">{children}</button>{" "}
-        </Link>
+        <button type={type} className={className}>
+            <span>{label}</span>
+            {Icon && Icon}
+        </button>
     );
 }
 
 Button.propTypes = {
-    children: PropTypes.string,
-    link: PropTypes.string,
+    label: PropTypes.string,
+    type: PropTypes.string,
+    className: PropTypes.string,
+    Icon: PropTypes.object,
 };

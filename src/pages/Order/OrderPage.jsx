@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import Button from "../../components/Button";
+
+import LinkButton from "../../components/LinkButton";
 
 function OrderPage() {
     // const location = useLocation();
@@ -13,7 +14,7 @@ function OrderPage() {
                     username.charAt(0).toUpperCase() + username.slice(1)}{" "}
             </h1>
 
-            <Button link="/">Déconnexion</Button>
+            <LinkButton link="/" type={"button"} label={" Déconnexion"} />
         </>
     );
 }

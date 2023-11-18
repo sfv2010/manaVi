@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import LinkButton from "../../components/LinkButton";
 
 function ErrorPage() {
     return (
-        <button type="button">
-            <Link to="/">Re-tourner vers la page d accueil</Link>
-        </button>
+        <LinkButton
+            link={"/"}
+            type={"button"}
+            label={" Re-tourner vers la page d accueil"}></LinkButton>
     );
 }
 
