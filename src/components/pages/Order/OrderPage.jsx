@@ -5,27 +5,18 @@ import Navbar from "./Navbar";
 function OrderPage() {
     return (
         <OrderPageStyled>
-            <div className="container">
-                {" "}
-                <Navbar />
-                <MainOrder />
-            </div>
+            <Navbar />
+            <MainOrder />
         </OrderPageStyled>
     );
 }
 
 const OrderPageStyled = styled.div`
-    background-color: orange;
     display: flex;
     flex-direction: column;
-
-    .container {
-        max-width: 1400px;
-        height: 97vh;
-        margin: 20px;
-        display: flex;
-        flex-direction: column;
-    }
+    max-width: 1400px;
+    height: 98vh;
+    margin: 20px auto;
 `;
 
 export default OrderPage;
