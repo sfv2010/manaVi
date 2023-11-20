@@ -16,7 +16,7 @@ export default function Navbar() {
                 className="linkButton"
                 link="/"
                 type={"button"}
-                label={<Logo className={"navLogo"} />}
+                label={<Logo />}
             />
             <div className="navRight">
                 {" "}
@@ -32,7 +32,7 @@ export default function Navbar() {
                     </h1>
 
                     <LinkButton
-                        className="linkButton"
+                        className="linkButton linkButtonHover"
                         link="/"
                         type={"button"}
                         label={"Se déconnecter"}
@@ -61,6 +61,7 @@ const OrderStyled = styled.nav`
         gap: 10px;
         width: 120px;
         height: 44px;
+        margin-right: 50px;
     }
     .navRightUser {
         display: flex;
@@ -88,18 +89,15 @@ const OrderStyled = styled.nav`
         border: none;
         background: none;
         cursor: pointer;
-        &:hover {
-            &:before {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: -3px;
-                width: 100%;
-                border-bottom: 1px solid #747b91;
-            }
-        }
     }
-    .navLogo {
-        transform: scale(1);
+    .linkButtonHover:hover {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            border-bottom: 1px solid #747b91;
+        }
     }
 `;

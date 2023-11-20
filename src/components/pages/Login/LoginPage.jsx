@@ -6,7 +6,7 @@ import burgerBG from "../../../assets/burgerBG.jpg";
 function LoginPage() {
     return (
         <LoginPageStyled>
-            <Logo />
+            <Logo className={"loginLogo"} />
             <Login />;
         </LoginPageStyled>
     );
@@ -36,6 +36,9 @@ const LoginPageStyled = styled.div`
         filter: brightness(0.5);
         /* background-blend-mode: darken;
         beforeの前にbackground-image: url(${burgerBG})ーを出すとダークモードが効かない */
+    }
+    .loginLogo {
+        transform: scale(2.5);
     }
 `;
 export default LoginPage;
