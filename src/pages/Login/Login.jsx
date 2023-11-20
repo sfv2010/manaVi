@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { FaChevronRight } from "react-icons/fa";
+import Input from "./Input";
 import { PiUserCircleFill } from "react-icons/pi";
+import Button from "../../components/Button";
 
 function Login() {
     const [username, setUsername] = useState("");
@@ -15,29 +17,28 @@ function Login() {
         // navigate("/order", { state: { username } });
         navigate(`order/${username}`);
     };
+    const handleChange = (e) => setUsername(e.target.value);
     return (
         <LoginStyled>
             <h1 className="bonbon">Bienvenue chez nous!</h1>
             <hr />
             <h2>Connectez-vous</h2>
             <form onSubmit={handleSubmit}>
-                <div className="inputContainer">
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        value={username}
-                        placeholder="Entre votre prénom"
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
-                    <PiUserCircleFill className="inputIcon" />
-                </div>
+                <Input
+                    value={username}
+                    onChange={handleChange}
+                    placeholder={"Entre votre prénom"}
+                    required={"required"}
+                    Icon={<PiUserCircleFill className="inputIcon" />}
+                    className={"inputContainer"}
+                />
 
-                <button type="submit">
-                    <span> Accédez à mon espace</span>{" "}
-                    <FaChevronRight className="chevron" />
-                </button>
+                <Button
+                    type={"submit"}
+                    className="button"
+                    Icon={<FaChevronRight className="chevron" />}
+                    label={"Accédez à mon espace"}
+                />
             </form>
         </LoginStyled>
     );
@@ -69,7 +70,7 @@ const LoginStyled = styled.main`
         margin: 30px 0;
     }
     input,
-    button {
+    .button {
         width: 400px;
         padding: 18px 24px;
         border-radius: 5px;
@@ -99,10 +100,12 @@ const LoginStyled = styled.main`
         font-size: 18px;
         color: #d3d3d3;
     }
-    button {
+
+    .button {
         display: flex;
         justify-content: center;
         align-items: center;
+
         color: ${theme.colors.white};
         background-color: ${theme.colors.primary_burger};
         font-weight: ${theme.weights.bold};
