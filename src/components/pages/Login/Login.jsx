@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 import { FaChevronRight } from "react-icons/fa";
 import Input from "./Input";
-import { PiUserCircleFill } from "react-icons/pi";
+import { BsPersonCircle } from "react-icons/bs";
+
 import Button from "../../reusable-ui/Button";
 
 function Login() {
@@ -29,7 +30,7 @@ function Login() {
                     onChange={handleChange}
                     placeholder={"Entre votre prénom"}
                     required={"required"}
-                    Icon={<PiUserCircleFill className="inputIcon" />}
+                    Icon={<BsPersonCircle className="inputIcon" />}
                     className={"inputContainer"}
                 />
 

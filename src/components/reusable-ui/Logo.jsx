@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import { theme } from "../../theme";
 
-export default function Logo() {
+export default function Logo({ className }) {
     return (
-        <LogoStyled>
+        <LogoStyled className={className}>
             <h1>CRAZEE</h1>
             <img src={burgerLogo}></img>
             <h1>BURGER</h1>
@@ -24,7 +24,6 @@ const LogoStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(3);
 
     img {
         margin: 0 10px;
@@ -42,3 +41,7 @@ const LogoStyled = styled.div`
         color: ${theme.colors.primary};
     }
 `;
+
+Logo.propTypes = {
+    className: PropTypes.string,
+};

@@ -1,22 +1,22 @@
-import { useParams } from "react-router-dom";
-
-import LinkButton from "../../reusable-ui/LinkButton";
+import styled from "styled-components";
+import MainOrder from "./MainOrder";
+import Navbar from "./Navbar";
 
 function OrderPage() {
-    // const location = useLocation();
-    // const { username } = location.state || {};
-    const { username } = useParams();
     return (
-        <>
-            <h1>
-                Bonjour{" "}
-                {username &&
-                    username.charAt(0).toUpperCase() + username.slice(1)}{" "}
-            </h1>
-
-            <LinkButton link="/" type={"button"} label={" Déconnexion"} />
-        </>
+        <OrderPageStyled>
+            <Navbar />
+            <MainOrder />
+        </OrderPageStyled>
     );
 }
+
+const OrderPageStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    height: 95vh;
+    margin: 20px auto;
+`;
 
 export default OrderPage;
