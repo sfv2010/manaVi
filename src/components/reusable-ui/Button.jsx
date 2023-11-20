@@ -9,7 +9,7 @@ export default function Button({ type, className, label, Icon }) {
 }
 
 Button.propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     type: PropTypes.string,
     className: PropTypes.string,
     Icon: PropTypes.object,

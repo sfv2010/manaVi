@@ -10,7 +10,7 @@ export default function LinkButton({ link, type, label, className }) {
 }
 
 LinkButton.propTypes = {
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     link: PropTypes.string,
     type: PropTypes.string,
     className: PropTypes.string,
