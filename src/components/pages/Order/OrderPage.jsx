@@ -15,7 +15,7 @@ const OrderPageStyled = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 1400px;
-    height: 98vh;
+    height: 95vh;
     margin: 20px auto;
 `;
 
