@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 
 import LinkButton from "../../reusable-ui/LinkButton";
 import styled from "styled-components";
-import { PiUserCircleFill } from "react-icons/pi";
+import { BsPersonCircle } from "react-icons/bs";
+
 import { theme } from "../../../theme";
 import Logo from "../../reusable-ui/Logo";
 
@@ -12,33 +13,39 @@ export default function Navbar() {
     const { username } = useParams();
     return (
         <OrderStyled>
-            <LinkButton
-                className="linkButton"
-                link="/"
-                type={"button"}
-                label={<Logo />}
-            />
-            <div className="navRight">
+            <div className="navLeftContainer">
                 {" "}
-                <div className="navRightUser">
-                    <h1 className="NavUser">
-                        Hey,{" "}
-                        <span className="navSpan">
-                            {" "}
-                            {username &&
-                                username.charAt(0).toUpperCase() +
-                                    username.slice(1)}{" "}
-                        </span>
-                    </h1>
+                <LinkButton
+                    className="linkButton"
+                    link="/"
+                    type={"button"}
+                    label={<Logo />}
+                />
+            </div>
 
-                    <LinkButton
-                        className="linkButton linkButtonHover"
-                        link="/"
-                        type={"button"}
-                        label={"Se déconnecter"}
-                    />
+            <div className="navRightContainer">
+                <div className="adminButton">activer le mode admin</div>
+                <div className="navRight">
+                    <div className="navRightUser">
+                        <p className="NavUser">
+                            Hey,{" "}
+                            <span className="navSpan">
+                                {" "}
+                                {username &&
+                                    username.charAt(0).toUpperCase() +
+                                        username.slice(1)}{" "}
+                            </span>
+                        </p>
+
+                        <LinkButton
+                            className="linkButton linkButtonHover"
+                            link="/"
+                            type={"button"}
+                            label={"Se déconnecter"}
+                        />
+                    </div>
+                    <BsPersonCircle className="navIcon" />
                 </div>
-                <PiUserCircleFill className="navIcon" />
             </div>
         </OrderStyled>
     );
@@ -50,9 +57,17 @@ const OrderStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     color: ${theme.colors.greyBlue};
-    font-family: "Open Sans";
     border-radius: 15px 15px 0px 0px;
     background-color: white;
+    .navLeftContainer {
+        flex: 2;
+    }
+    .navRightContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+    }
     .navRight {
         display: flex;
         justify-content: center;
