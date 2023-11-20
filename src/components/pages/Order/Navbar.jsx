@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 
 import LinkButton from "../../reusable-ui/LinkButton";
+import Button from "../../reusable-ui/Button";
 import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
 
 import { theme } from "../../../theme";
 import Logo from "../../reusable-ui/Logo";
+import { refreshPage } from "../../../utils/window";
 
 export default function Navbar() {
     // const location = useLocation();
@@ -15,11 +17,11 @@ export default function Navbar() {
         <OrderStyled>
             <div className="navLeftContainer">
                 {" "}
-                <LinkButton
+                <Button
                     className="linkButton"
-                    link="/"
                     type={"button"}
                     label={<Logo />}
+                    onClick={refreshPage}
                 />
             </div>
 
