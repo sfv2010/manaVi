@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { theme } from "../../theme";
+import { theme } from "../../../theme";
 import { FaChevronRight } from "react-icons/fa";
 import Input from "./Input";
 import { PiUserCircleFill } from "react-icons/pi";
-import Button from "../../components/Button";
+import Button from "../../reusable-ui/Button";
 
 function Login() {
     const [username, setUsername] = useState("");

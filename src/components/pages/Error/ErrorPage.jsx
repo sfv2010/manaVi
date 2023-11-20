@@ -1,4 +1,4 @@
-import LinkButton from "../../components/LinkButton";
+import LinkButton from "../../reusable-ui/LinkButton";
 
 function ErrorPage() {
     return (

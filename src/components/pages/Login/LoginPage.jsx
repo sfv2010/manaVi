@@ -1,7 +1,7 @@
-import Logo from "../../components/Logo";
-import styled from "styled-components";
-import burgerBG from "../../assets/burgerBG.jpg";
+import Logo from "../../reusable-ui/Logo";
 import Login from "./Login";
+import styled from "styled-components";
+import burgerBG from "../../../assets/burgerBG.jpg";
 
 function LoginPage() {
     return (

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import LinkButton from "../../components/LinkButton";
+import LinkButton from "../../reusable-ui/LinkButton";
 
 function OrderPage() {
     // const location = useLocation();

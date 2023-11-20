@@ -1,8 +1,8 @@
-import burgerLogo from "../assets/logoOrange.png";
+import burgerLogo from "../../assets/logoOrange.png";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { theme } from "../theme";
+import { theme } from "../../theme";
 
 export default function Logo() {
     return (
