@@ -29,12 +29,12 @@ export default function Navbar() {
                     <div className="navRightUser">
                         <p className="NavUser">
                             Hey,{" "}
-                            <span className="navSpan">
+                            <b className="navSpan">
                                 {" "}
                                 {username &&
                                     username.charAt(0).toUpperCase() +
                                         username.slice(1)}{" "}
-                            </span>
+                            </b>
                         </p>
 
                         <LinkButton
@@ -58,7 +58,7 @@ const OrderStyled = styled.nav`
     align-items: center;
     color: ${theme.colors.greyBlue};
     border-radius: 15px 15px 0px 0px;
-    background-color: white;
+    background-color: ${theme.colors.white};
     .navLeftContainer {
         flex: 2;
     }
