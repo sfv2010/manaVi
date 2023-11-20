@@ -73,7 +73,7 @@ const LoginStyled = styled.main`
     .button {
         width: 400px;
         padding: 18px 24px;
-        border-radius: 5px;
+        border-radius: ${theme.borderRadius.round};
         align-items: center;
         border: none;
         display: block;

@@ -33,12 +33,12 @@ const LogoStyled = styled.div`
         object-position: center;
     }
     h1 {
-        font-family: Amatic SC;
+        font-family: Amatic SC, cursive;
         text-transform: uppercase;
-        font-size: 36px;
+        font-size: ${theme.fonts.P4};
         line-height: 1em;
-        font-weight: 700;
+        font-weight: ${theme.weights.bold};
         letter-spacing: 1.5px;
-        color: ${theme.colors.primary_burger};
+        color: ${theme.colors.primary};
     }
 `;
