@@ -6,13 +6,14 @@ export default function Input({
     Icon,
     value,
     onChange,
+    type,
     ...extraProps
 }) {
     return (
         <div className={className}>
             {Icon && Icon}
             <input
-                type="text"
+                type={type}
                 id={value}
                 name={value}
                 value={value}
@@ -29,5 +30,6 @@ Input.propTypes = {
     value: PropTypes.string,
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
+    type: PropTypes.string,
     required: PropTypes.string,
 };

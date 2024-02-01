@@ -19,6 +19,7 @@ function Login() {
         navigate(`order/${username}`);
     };
     const handleChange = (e) => setUsername(e.target.value);
+
     return (
         <LoginStyled>
             <h1 className="bonbon">Bienvenue chez nous!</h1>
@@ -29,16 +30,33 @@ function Login() {
                     value={username}
                     onChange={handleChange}
                     placeholder={"Entre votre prénom"}
+                    type={"text"}
                     required={"required"}
                     Icon={<BsPersonCircle className="inputIcon" />}
                     className={"inputContainer"}
                 />
+                {/* <Input
+                    value={password}
+                    onChange={handleChangePassword}
+                    placeholder={"Entre votre password"}
+                    type={"password"}
+                    required={""}
+                    Icon={<RiLockPasswordFill className="inputIcon" />}
+                    className={"inputContainer"}
+                /> */}
 
                 <Button
                     type={"submit"}
                     className="button"
                     Icon={<FaChevronRight className="chevron" />}
                     label={"Accédez à mon espace"}
+                />
+                <br />
+                <Button
+                    type={"submit"}
+                    className="button"
+                    Icon={<FaChevronRight className="chevron button2" />}
+                    label={"Accédez"}
                 />
             </form>
         </LoginStyled>
@@ -122,6 +140,9 @@ const LoginStyled = styled.main`
     .chevron {
         margin-left: 10px;
         font-size: 15px;
+    }
+    .button2 {
+        color: red;
     }
 `;
 

@@ -13,6 +13,7 @@ export default function Navbar() {
     // const location = useLocation();
     // const { username } = location.state || {};
     const { username } = useParams();
+    console.log(username);
     return (
         <OrderStyled>
             <div className="navLeftContainer">
@@ -23,6 +24,7 @@ export default function Navbar() {
                     label={<Logo />}
                     onClick={refreshPage}
                 />
+                {/* <Logo onClick = {() => window.location.reload()} /> */}
             </div>
 
             <div className="navRightContainer">
