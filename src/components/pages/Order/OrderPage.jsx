@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MainOrder from "./MainOrder";
+import MainOrder from "./main/MainOrder";
 import Navbar from "./Navbar";
 
 function OrderPage() {

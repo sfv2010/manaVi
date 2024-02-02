@@ -19,6 +19,7 @@ Logo.propTypes = {
     textRight: PropTypes.string,
     logoImg: PropTypes.string,
     onClick: PropTypes.string,
+    className: PropTypes.string,
 };
 
 const LogoStyled = styled.div`
@@ -42,7 +43,3 @@ const LogoStyled = styled.div`
         color: ${theme.colors.primary};
     }
 `;
-
-Logo.propTypes = {
-    className: PropTypes.string,
-};
