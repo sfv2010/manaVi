@@ -2,22 +2,24 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { fakeMenu2 } from "../../fakeData/fakeMenu";
+import { useState } from "react";
 
 export default function Card() {
+    const [menu, setMenu] = useState(fakeMenu2);
     return (
         <>
-            {fakeMenu2.map((item) => (
-                <CardStyled key={item.id}>
+            {menu.map((produit) => (
+                <CardStyled key={produit.id}>
                     <img
                         className="img"
-                        src={item.imageSource}
-                        alt={item.title}
+                        src={produit.imageSource}
+                        alt={produit.title}
                     />
                     <div className="descriptionContainer">
-                        <h1 className="title">{item.title}</h1>
+                        <h1 className="title">{produit.title}</h1>
                         <div className="description">
                             {" "}
-                            <p className="price">{item.price}</p>
+                            <p className="price">{produit.price}</p>
                             <button className="menuButton">Ajouter</button>
                         </div>
                     </div>
