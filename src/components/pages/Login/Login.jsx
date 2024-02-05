@@ -99,7 +99,6 @@ const LoginStyled = styled.main`
     }
     input {
         display: flex;
-        width: 325px;
         margin: 15px 0;
         padding-left: 50px;
         font-weight: ${theme.fonts.weights.regular};

@@ -18,7 +18,7 @@ Logo.propTypes = {
     textLeft: PropTypes.string,
     textRight: PropTypes.string,
     logoImg: PropTypes.string,
-    onClick: PropTypes.string,
+    onClick: PropTypes.func,
     className: PropTypes.string,
 };
 
