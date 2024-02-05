@@ -9,11 +9,11 @@ import { theme } from "../../../theme";
 import Logo from "../../reusable-ui/Logo";
 import { refreshPage } from "../../../utils/window";
 
-export default function Navbar() {
+export default function Navbar1() {
     // const location = useLocation();
     // const { username } = location.state || {};
     const { username } = useParams();
-    console.log(username);
+    // console.log(username);
     return (
         <OrderStyled>
             <div className="navLeftContainer">
@@ -56,7 +56,9 @@ export default function Navbar() {
 }
 
 const OrderStyled = styled.nav`
-    padding: 20px;
+    height: 10vh;
+
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

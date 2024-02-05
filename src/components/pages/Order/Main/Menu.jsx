@@ -1,16 +1,25 @@
 import styled from "styled-components";
 import { theme } from "../../../../theme";
-import Card from "../../../reusable-ui/Card";
+import Card from "./Card";
 import { useState } from "react";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 
-export default function MainOrder() {
+export default function Menu() {
     const [menu, setMenu] = useState(fakeMenu2);
     return (
         <MainOrderStyled>
             <div className="basket">Basket</div>
             <div className="mainContainer">
-                <Card />
+                {menu.map((produit) => {
+                    return (
+                        <Card
+                            id={produit.id}
+                            title={produit.title}
+                            imageSource={produit.imageSource}
+                            price={produit.price}
+                        />
+                    );
+                })}
             </div>
         </MainOrderStyled>
     );
@@ -22,6 +31,9 @@ const MainOrderStyled = styled.main`
     background: ${theme.colors.background_white};
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
     border-radius: 0px 0px 15px 15px;
+    grid-template-columns: 1fr;
+
+    overflow-y: scroll;
 
     .mainContainer {
         display: grid;

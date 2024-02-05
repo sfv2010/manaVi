@@ -1,22 +1,40 @@
 import styled from "styled-components";
-import MainOrder from "./main/MainOrder";
-import Navbar from "./Navbar";
+import Menu from "./Main/Menu";
+import Navbar from "./Navbar/Navbar";
+import { theme } from "../../../theme";
+import { useParams } from "react-router-dom";
 
 function OrderPage() {
+    // state
+    const { username } = useParams();
+    // comportements
+
+    //affichage
     return (
         <OrderPageStyled>
-            <Navbar />
-            <MainOrder />
+            <div className="container">
+                {" "}
+                <Navbar username={username} />
+                <Menu />
+            </div>
         </OrderPageStyled>
     );
 }
 
 const OrderPageStyled = styled.div`
+    background: ${theme.colors.primary};
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    max-width: 1400px;
-    height: 95vh;
-    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        height: 95vh;
+        width: 1400px;
+        display: flex;
+        flex-direction: column;
+        border-radius: ${theme.borderRadius.extraRound};
+    }
 `;
 
 export default OrderPage;
