@@ -13,11 +13,12 @@ export default function Menu() {
                 {menu.map((produit) => {
                     return (
                         <Card
-                            id={produit.id}
+                            key={produit.id}
                             title={produit.title}
                             imageSource={produit.imageSource}
                             price={produit.price}
                         />
+                        // ＜Card {...produit }/> //これでも大丈夫だが、リスクあり
                     );
                 })}
             </div>
