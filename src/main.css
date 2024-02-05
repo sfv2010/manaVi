@@ -1,8 +1,10 @@
-/* * {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", "Robot", sans-serif;
+    font-family: "Open Sans", "Roboto", sans-serif;
     list-style: none;
     text-decoration: none;
     color: inherit;
@@ -13,7 +15,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-} */
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
