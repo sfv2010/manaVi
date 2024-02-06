@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import { theme } from "../../theme";
 
-export default function Logo({ className }) {
+export default function Logo({ className, onClick }) {
     return (
-        <LogoStyled className={className}>
+        <LogoStyled className={className} onClick={onClick}>
             <h1>CRAZEE</h1>
             <img src={burgerLogo}></img>
             <h1>BURGER</h1>
@@ -18,6 +18,8 @@ Logo.propTypes = {
     textLeft: PropTypes.string,
     textRight: PropTypes.string,
     logoImg: PropTypes.string,
+    onClick: PropTypes.func,
+    className: PropTypes.string,
 };
 
 const LogoStyled = styled.div`
@@ -36,12 +38,8 @@ const LogoStyled = styled.div`
         text-transform: uppercase;
         font-size: ${theme.fonts.P4};
         line-height: 1em;
-        font-weight: ${theme.weights.bold};
+        font-weight: ${theme.fonts.weights.bold};
         letter-spacing: 1.5px;
         color: ${theme.colors.primary};
     }
 `;
-
-Logo.propTypes = {
-    className: PropTypes.string,
-};
