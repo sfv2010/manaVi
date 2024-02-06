@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
 import Button from "../../../reusable-ui/Button";
+import { formatPrice } from "../../../../utils/maths";
 
 export default function Card({ title, imageSource, price }) {
     return (
@@ -12,7 +13,7 @@ export default function Card({ title, imageSource, price }) {
                     <h1 className="title">{title}</h1>
                     <div className="description">
                         {" "}
-                        <p className="price">{price}</p>
+                        <p className="price">{formatPrice(price)}</p>
                         <div className="rightDesc">
                             <Button className="menuButton" label={"Ajouter"} />
                         </div>
