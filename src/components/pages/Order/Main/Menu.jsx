@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { theme } from "../../../../theme";
-import Card from "./Card";
+import Card from "../../../reusable-ui/Card";
 import { useState } from "react";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { formatPrice } from "../../../../utils/maths";
 
 export default function Menu() {
     const [menu, setMenu] = useState(fakeMenu2);
@@ -10,13 +11,14 @@ export default function Menu() {
         <MainOrderStyled>
             <div className="basket">Basket</div>
             <div className="mainContainer">
-                {menu.map((produit) => {
+                {/* {menu.map((produit) => { */}
+                {menu.map(({ id, title, imageSource, price }) => {
                     return (
                         <Card
-                            key={produit.id}
-                            title={produit.title}
-                            imageSource={produit.imageSource}
-                            price={produit.price}
+                            key={id}
+                            title={title}
+                            imageSource={imageSource}
+                            leftDesc={formatPrice(price)}
                         />
                         // ＜Card {...produit }/> //これでも大丈夫だが、リスクあり
                     );

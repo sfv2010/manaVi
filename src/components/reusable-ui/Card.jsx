@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "../../../../theme";
-import Button from "../../../reusable-ui/Button";
-import { formatPrice } from "../../../../utils/maths";
+import { theme } from "../../theme";
+import Button from "./Button";
 
-export default function Card({ title, imageSource, price }) {
+export default function Card({ title, imageSource, leftDesc }) {
     return (
         <>
             <CardStyled>
@@ -13,7 +12,7 @@ export default function Card({ title, imageSource, price }) {
                     <h1 className="title">{title}</h1>
                     <div className="description">
                         {" "}
-                        <p className="price">{formatPrice(price)}</p>
+                        <p className="leftDesc">{leftDesc}</p>
                         <div className="rightDesc">
                             <Button className="menuButton" label={"Ajouter"} />
                         </div>
@@ -55,12 +54,14 @@ const CardStyled = styled.div`
         width: 100%;
         text-overflow: ellipsis;
         font-family: "Amatic SC", cursive;
+        //以下三つをつけると、はみ出た部分が...になる
+        /* white-space: nowrap; overflow: hidden; text-overflow: ellipsis; */
     }
     .description {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .price {
+    .leftDesc {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -89,5 +90,5 @@ const CardStyled = styled.div`
 Card.propTypes = {
     title: PropTypes.string,
     imageSource: PropTypes.string,
-    price: PropTypes.number,
+    leftDesc: PropTypes.number,
 };
