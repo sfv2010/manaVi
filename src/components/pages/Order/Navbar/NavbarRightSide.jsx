@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import Profile from "./Profile";
 import PropTypes from "prop-types";
+import Admin from "./Admin";
 
 export default function NavbarRightSide({ username }) {
     return (
         <NavbarRightSideStyled className="right-side">
-            {/* <div className="admin-button">Admin Button</div> */}
+            <Admin />
             <Profile username={username} />
         </NavbarRightSideStyled>
     );
