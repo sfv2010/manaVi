@@ -90,5 +90,5 @@ const CardStyled = styled.div`
 Card.propTypes = {
     title: PropTypes.string,
     imageSource: PropTypes.string,
-    leftDesc: PropTypes.number,
+    leftDesc: PropTypes.string,
 };

@@ -33,6 +33,7 @@ const ProfileStyled = styled.div`
     .info {
         text-align: right;
         margin-right: 10px;
+        margin-left: 50px;
         p {
             margin: 0;
             color: ${theme.colors.greyBlue};
